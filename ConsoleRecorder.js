@@ -1,7 +1,14 @@
 class ConsoleRecorder {
-    constructor(displayElementId) {
-        this.displayElement = document.getElementById(displayElementId);
+    constructor() {
+        this.createDisplayElement();
         this.overwriteConsoleMethod();
+    }
+
+    createDisplayElement() {
+        this.displayElement = document.createElement('div');
+        this.displayElement.id = 'console-recorder-display';
+        this.displayElement.style = "console-recorder-display";
+        document.body.appendChild(this.displayElement);
     }
 
     overwriteConsoleMethod() {
@@ -39,11 +46,11 @@ class ConsoleRecorder {
 
     displayInUI(type, message) {
         let newElement = document.createElement('div');
-        newElement.className = type;
+        newElement.className = `console-recorder-card ${type}`;
         newElement.textContent = `[${type}] ${message}`;
         this.displayElement.appendChild(newElement);
     }
 }
-new ConsoleRecorder('console-display');
+const consoleRecorder = new ConsoleRecorder();
 console.log("Ceci est un message de log.");
 console.error("Ceci est un message d'erreur.");
