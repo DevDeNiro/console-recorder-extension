@@ -9,8 +9,8 @@ There are several potential implementations for this project, and contributions 
 ### Features :
 
 - [x] : Capture console messages: log, error, warn, info, debug.
-- [] : Filtering Messages by Type, and allow user to display them or not
-- [] : Allowing users to choose whether or not to display stack traces with error messages 
+- [ ] : Filtering Messages by Type, and allow user to display them or not
+- [ ] : Allowing users to choose whether or not to display stack traces with error messages 
 
 ### Installation :
 
