@@ -1,16 +1,7 @@
 #console-recorder-display {
-    position: fixed;
-    z-index: 1000;
-    top: 10px;
-    right: 10px;
+    margin: 10px;
+    z-index: 1000000;
     width: 300px;
-    height: auto;
-    max-width: 500px;
-    max-height: 500px;
-    font-size: 12px;
-    overflow: auto;
-    padding: 15px;
-    gap: 10px;
 }
 
 .console-recorder-card {
